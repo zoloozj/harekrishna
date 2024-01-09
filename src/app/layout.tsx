@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -29,6 +30,29 @@ export default function RootLayout({
         <main className="relative flex flex-col min-h-screen overflow-x-hidden">
           <Navbar />
           <div className="flex-1 flex-grow">{children}</div>
+          <div className="absolute right-0 left-0 bottom-0">
+            <Image
+              src="/icons/mountains.svg"
+              alt="background"
+              className="w-auto h-auto"
+              width={1000}
+              height={1000}
+            />
+            <Image
+              src="/icons/cloud-right-gray.svg"
+              alt="background"
+              className="w-auto h-[80px] lg:h-[130px] absolute right-8 -top-72"
+              width={300}
+              height={300}
+            />
+            <Image
+              src="/icons/cloud-left-gray.svg"
+              alt="background"
+              className="w-auto h-[80px] lg:h-[130px] absolute left-8 -top-36"
+              width={300}
+              height={300}
+            />
+          </div>
         </main>
       </body>
     </html>

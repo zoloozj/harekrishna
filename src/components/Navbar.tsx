@@ -50,7 +50,7 @@ const Navbar: FunctionComponent<PageProps> = ({ className }) => {
               width={250}
               height={150}
             />
-            <p className="font-semibold capitalize text-nowrap">
+            <p className="font-semibold capitalize text-sm lg:text-md text-nowrap">
               Дээд эрдэм ухаан судлахуйн төв
             </p>
           </div>
@@ -86,7 +86,7 @@ const Navbar: FunctionComponent<PageProps> = ({ className }) => {
         <div className="lg:flex hidden justify-evenly">
           {navbarMenu.map((item, index) => (
             <Link
-              className="text-nowrap text-center hover:font-semibold"
+              className="text-nowrap text-center font-semibold"
               key={index}
               href={item.to}
             >

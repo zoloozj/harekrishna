@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={cn("relative h-full font-sans antialiased", roboto.variable)}
       >
-        <main className="relative flex flex-col min-h-screen">
+        <main className="relative flex flex-col min-h-screen overflow-x-hidden">
           <Navbar />
           <div className="flex-1 flex-grow">{children}</div>
         </main>
